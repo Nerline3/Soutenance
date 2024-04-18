@@ -9,6 +9,9 @@ if (isset($_POST['sends'])) {
     $insert->execute(array(
         ':email' => $_POST['email'],
     ));
+    {
+        echo '<div class="alert alert-success" role="alert">Votre inscription a bien été pris compte !</div>';
+    }
 }
 ?>
 <!-- script JS -->
@@ -58,7 +61,7 @@ if (isset($_POST['sends'])) {
                 <a href="https://www.tiktok.com" target="_blank">
                     <p><i class="bi bi-tiktok"></i></p>
                 </a>
-            </div>
+            </div><!-- fin div reseaux -->
         </section><!-- fin section -->
         <div class="row">
             <section class="col-12 col-md-3 aide d-md-flex flex-md-row flex-column">
@@ -70,7 +73,7 @@ if (isset($_POST['sends'])) {
             <section class="col-12 col-md-3 aide d-md-flex flex-md-row flex-column">
                 <p class="d-md-block">6 boulevard louis loucheur, Suresnes</p>
             </section>
-        </div>
+        </div><!-- fin div row -->
 
     </div>
     <div class="container text-center">
@@ -79,11 +82,7 @@ if (isset($_POST['sends'])) {
             <a href="mentionslegales.php" class="text-decoration-none me-3 text-dark">Mentions légales</a>
             <a href="chartreconfidentialite.php" class="text-decoration-none text-dark">Charte de confidentialité</a>
         </p>
-
-
-    </div>
-
-    </div><!-- fin div "row" -->
+    </div><!-- fin container -->
 </footer><!-- fin du footer -->
 
 <!-- Lien JS bootstrap -->

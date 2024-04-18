@@ -22,16 +22,16 @@ require "inc/header.inc.php";
                 <div id="images">
                     <img src="<?php echo $produit['image1']; ?>" alt="image d'illustration" class="img-fluid mainImage" id="mainImage1">
                     <img src="<?php echo $produit['image2']; ?>" alt="image d'illustration" class="img-fluid mainImage d-none" id="mainImage2">
-                </div>
+                </div><!-- fin div images -->
                 <div class="card-body">
                     <p class="text-dark mb-1"><?php echo $produit['nom_produit']; ?></p>
                     <p class="card-text text-dark mb-1"><?php echo $produit['couleur']; ?></p>
                     <p class="card-text text-dark mb-0"><?php echo $produit['prix']; ?>€</p>
-                </div>
-            </div>
+                </div><!-- fin div card-body -->
+            </div><!-- fin div infos -->
         </a>
-    </div>
-</div>
+    </div><!-- div card  -->
+</div><!-- fin div col-12 -->
 
         <?php
         } // Fin de la boucle while

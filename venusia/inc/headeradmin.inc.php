@@ -94,8 +94,8 @@ if (estAdmin()) {
                         </li>
                     </ul>                   
                     </div>
-                </div>
+                </div><!-- fin div offcanvas -->
             </div><!-- fin div container -->
-    </nav>
+    </nav><!-- fin nav -->
 
     <?php  } ?> <!-- fin if (estAdmin()) -->

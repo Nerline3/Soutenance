@@ -45,7 +45,7 @@ if(isset($_GET['action']) && $_GET['action'] == 'deconnexion'){
 
             ?>
                 <!-- articles1.php -->
-                <div class="col-12 col-sm-6 col-md-3">
+                <div class="col-12 col-sm-6 col-md-3 mb-4">
                     <div class="card" style="width: 18rem;">
                         <a href="ficheproduit.php?id_produit=<?php echo $produit['id_produit']; ?>">
                             <div class="infos">
@@ -56,7 +56,7 @@ if(isset($_GET['action']) && $_GET['action'] == 'deconnexion'){
                                 <div class="card-body">
                                     <p><?php echo $produit['nom_produit']; ?></p>
                                     <p class="card-text"><a href="#" style="text-decoration: none;"><?php echo $produit['couleur']; ?></a></p>
-                                    <p class="card-text"><a href="#" style="text-decoration: none;"><?php echo $produit['prix']; ?></a></p>
+                                    <p class="card-text"><a href="#" style="text-decoration: none;"><?php echo $produit['prix']; ?>€</a></p>
                                 </div>
                             </div>
                         </a>

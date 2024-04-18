@@ -14,7 +14,7 @@ require "inc/header.inc.php";
 
         while ($produit = $requete->fetch(PDO::FETCH_ASSOC)) {
         ?>
-            <!-- articles4.php -->
+            <!-- PAGE ARTICLES 4 -->
             <div class="col-12 col-sm-6 col-md-3 mb-4">
     <div class="card border-0">
         <a href="ficheproduit.php?id_produit=<?php echo $produit['id_produit']; ?>" class="text-decoration-none">
@@ -32,8 +32,6 @@ require "inc/header.inc.php";
         </a>
     </div><!-- fin div card  -->
 </div><!-- fin div col-12 -->
-
-
         <?php
         } // Fin de la boucle while
         ?>

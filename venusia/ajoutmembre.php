@@ -46,7 +46,7 @@ if (!empty($_POST)) {
             ));
 
             if ($insert) {
-                $contenu .= "<div class=\"alert alert-success\">Vous êtes bien inscrit sur le site, bienvenue ! <br></div>";
+                $contenu .= "<div class=\"alert alert-success\">Le membre a bien été ajouter ! <br></div>";
             } else {
                 $contenu .= "<div class=\"alert alert-danger\">Erreur lors de l'inscription</div>";
             }
@@ -92,24 +92,24 @@ if (!empty($_POST)) {
             </div><!--   MDP   -->
 
             <div class="mb-3">
-                <label for="statue">Statue</label>
+                <label for="statue">Statut</label>
                 <select name="statue" id="statue">
                 <option value="1">Administrateur</option>
-                            <option value="0" <?php if(isset($ajoutMembre['statue']) && $ajoutMembre['statue'] == ''){echo "selected";} ?>>Client</option>
+                            <option value="0" <?php if(isset($ajoutMembre['statue']) && $ajoutMembre['statue'] == ''){echo "selected";} ?>>Utilisateur</option>
                 </select>
-            </div><!--   STATUE   -->
+            </div><!--   STATUT   -->
 
             <input type="submit" value="Ajouter" class="btn btn-primary" name="majMe">
-        </form>
+        </form><!-- fin de form -->
 
 
-    </main>
+    </main><!-- fin du main -->
 
 
 </body>
 
+<!-- FOOTER  -->
 <?php
 }
 require "inc/footer.inc.php";
-
 ?>

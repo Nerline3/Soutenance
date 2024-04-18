@@ -9,7 +9,7 @@ $requete->execute([
 ]);
 $userInfo = $requete->fetch(PDO::FETCH_ASSOC);
 
-estAdmin() ? $paragraphe = "Vous êtes admin" : $paragraphe = "Vous êtes connecté";
+estAdmin() ? $paragraphe = "" : $paragraphe = "";
 
 
 // 3-la deconnexion
@@ -46,6 +46,3 @@ if (isset($_GET['action']) && $_GET['action'] == 'deconnexion') {
 <?php
 require "inc/footer.inc.php";
 ?>
-</body>
-
-</html>

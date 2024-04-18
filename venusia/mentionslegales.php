@@ -3,7 +3,8 @@
 require "inc/header.inc.php";
 ?>
 
-<main>
+<!-- debut du main  -->
+<main class="container">
 
     <h1>Mentions légales</h1>
     <section class="text-center mt-4">
@@ -27,10 +28,11 @@ require "inc/header.inc.php";
         </ul>
         <h4>4. Directeur de la publication</h4>
         <p>Le directeur de la publication du Site est : Nerline Martinet.</p>
-    </div>
-</section>
+    </div><!-- fin div informations -->
+</section><!-- fin section -->
 
 </main>
+<!-- FIN DU MAIN -->
 
 <?php
 require "inc/footer.inc.php";

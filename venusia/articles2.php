@@ -32,8 +32,6 @@ require "inc/header.inc.php";
         </a>
     </div><!-- fin div card -->
 </div><!-- fin div col-12 -->
-
-
         <?php
         } // Fin de la boucle while
         ?>
@@ -41,12 +39,10 @@ require "inc/header.inc.php";
     </div><!-- fin div row -->
 </main><!-- fin du main  -->
 
+<!-- js -->
 <script src="assets/js/script.js"></script>
 
 <!-- FOOTER -->
 <?php 
     require "inc/footer.inc.php";
-    ?>
-</body>
-
-</html>
+?>

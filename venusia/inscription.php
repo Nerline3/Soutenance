@@ -111,17 +111,15 @@ if (!empty($_POST)) {
 
                 <a href="connexion.php">
                     <p class="text-center">Déja un compte ?</p>
-                </a>
+                </a><!-- lien page connexion -->
 
             </form><!-- fin du formulaire -->
         </div><!-- fin de la colonne -->
     </div><!-- fin du row -->
 </main>
+<!-- FIN DU MAIN -->
 
-
+<!-- FOOTER -->
 <?php
 require "inc/footer.inc.php";
 ?>
-</body>
-
-</html>

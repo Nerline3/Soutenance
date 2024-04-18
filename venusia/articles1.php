@@ -27,6 +27,7 @@ require "inc/header.inc.php";
                     <a href="ficheproduit.php?id_produit=<?php echo $produit['id_produit']; ?>" class="text-decoration-none text-dark">
                         <div class="infos">
                             <div id="images">
+                                <!-- affiche la valeur d'un produit à l'intérieur d'une cellule -->
                                 <img src="<?php echo $produit['image1']; ?>" alt="image d'illustration" class="img-fluid mainImage" id="mainImage1">
                                 <img src="<?php echo $produit['image2']; ?>" alt="image d'illustration" class="img-fluid mainImage d-none" id="mainImage2">
                             </div>

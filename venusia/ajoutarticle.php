@@ -16,7 +16,7 @@ if (!empty($_POST['majP'])) {/* vérifie si des données ont été soumises via 
     // b-la requête d'insertion pour ajouter des données
     $ajout = $pdoVenusia->prepare("INSERT INTO produits (nom_produit, description, image1, image2, ref_produit, couleur, taille, taille_bonnet, stock, prix, id_categorie) VALUES (:nom_produit, :description, :image1, :image2, :ref_produit, :couleur, :taille, :taille_bonnet, :stock, :prix, :id_categorie)");
 
-    // la requête préparée en remplaçant les paramètres
+    //  insérer des données provenant d'un formulaire 
     $ajout->execute(array(
         ':nom_produit' => $_POST['nom_produit'],
         ':description' => $_POST['description'],
@@ -31,12 +31,6 @@ if (!empty($_POST['majP'])) {/* vérifie si des données ont été soumises via 
         ':id_categorie' => $_POST['id_categorie'],
     ));
 
-    if ($ajout) {/* vérifie si l'exécution de la requête d'insertion et la redirection */
-        header('location:articles.php');
-        exit();
-    } else {
-        $contenu .= "<div class=\"alert alert-danger\">L'article n'a pas pu être ajouté</div>";
-    }
 }
 ?>
 
@@ -75,6 +69,7 @@ if (!empty($_POST['majP'])) {/* vérifie si des données ont été soumises via 
             <label for="couleur">Couleurs</label>
             <select name="couleur" id="couleur" class="form-select">
                 <?php
+                //  sélectionne toutes les couleurs distinctes de la table "produits" dans la BDD
                 $requeteCouleur = $pdoVenusia->query("SELECT DISTINCT couleur FROM produits");
                 while ($couleur = $requeteCouleur->fetch(PDO::FETCH_ASSOC)) {
                     echo "<option value=\"$couleur[couleur]\">$couleur[couleur]</option>";
@@ -132,6 +127,8 @@ if (!empty($_POST['majP'])) {/* vérifie si des données ont été soumises via 
         <input type="submit" value="Ajouter l'article" class="btn btn-primary" name="majP"><!-- bouton de soumission -->
     </form><!-- fin du formulaire -->
 </main><!-- fin main -->
+
+<!-- FOOTER -->
 <?php
 require "inc/footer.inc.php";
 ?>

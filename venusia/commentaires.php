@@ -2,7 +2,7 @@
 /* 1- Require du fichier init: connexion à la BDD */
 require "inc/headeradmin.inc.php";
 
-if (estAdmin()){
+if (estAdmin()){ /*  vérifie si l'utilisateur est un administrateur */
 
 if (isset($_GET['action']) && $_GET['action'] == 'suppression' && isset($_GET['id_commentaire'])) {/* Je verifie que toutes les infos ci-dessus  (action, action qui correspond à la suppression et id_articles) sont bien présentes dans l'URL */
 
@@ -21,7 +21,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'suppression' && isset($_GET['i
 ?>
 
 
-
+<!-- DEBUT DU MAIN -->
 <main class="main-articles">
     <div class="row">
         <div class="col-12 titrearticle">
@@ -43,7 +43,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'suppression' && isset($_GET['i
                     <p class="card-text">Titre commentaire :<?php echo $produit['commentaire'] ?></p>
                     <p class="card-text">Contenu :<?php echo $produit['contenu_com'] ?></p>
                     <a href="commentaires.php?action=suppression&id_commentaire=<?php echo "$produit[id_commentaire]"; ?>" class="btn btn-danger" onclick="return(confirm('Êtes vous sûr de vouloir supprimer cet article ?'))"><i class="bi bi-trash3"></i></a>
-                </div>
+                </div><!-- fin card body -->
             </div><!-- fin div card -->
         <?php
         } // Fin de la boucle while
@@ -57,6 +57,3 @@ if (isset($_GET['action']) && $_GET['action'] == 'suppression' && isset($_GET['i
 }
 require "inc/footer.inc.php";
 ?>
-</body>
-
-</html>
